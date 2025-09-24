@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ body {
   color: #333;
 }
 
-
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-bottom: 10px;
@@ -25,8 +26,6 @@ a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
-
 /* Navbar Container */
 nav {
   
@@ -159,13 +158,14 @@ marquee {
   padding-left: 15px;
 }
 
-#sidebar a {
+/* style only nested (child) links in the sub-list */
+#sidebar ul ul a {
   padding: 8px 10px;
   font-size: 0.9rem;
   background-color: rgba(255,255,255,0.05);
 }
 
-#sidebar  a:hover {
+#sidebar ul ul a:hover {
   background-color: #e74c3c;
 }
 
@@ -205,9 +205,8 @@ marquee {
   transform: scale(1.05);
   border-color: #3498db;
 }
+/* removed undefined bounce animation on #img1 to avoid console errors */
 #img1 {
-  
-  animation: bounce 2s  ease-in-out;
 }
 /* Form Styling */
 .form-container {
@@ -227,6 +226,7 @@ marquee {
   border: 1px solid #ddd;
   width: 100%;
   max-width: 500px;
+  padding-bottom: 80px;
 }
 
 .contact-form h2 {
@@ -247,21 +247,24 @@ marquee {
   font-weight: bold;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input {
   width: 100%;
   padding: 12px;
   border: 2px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form-group input:focus{
   outline: none;
   border-color: #3498db;
 }
+
+/* restore basic textarea sizing */
+/* .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+} */
 
 
 
@@ -275,7 +278,6 @@ marquee {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
-  padding-bottom: 50px;
 }
 
 .submit-btn:hover {
@@ -301,7 +303,6 @@ marquee {
   width: 100%;
   max-width: 800px;
   line-height: 1.6;
-  padding-bottom: 80px;
 }
 
 .about-content h2 {
