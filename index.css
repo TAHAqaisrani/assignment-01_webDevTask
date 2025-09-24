@@ -67,11 +67,9 @@ nav ul li a:hover {
   background-color: #3498db;
   color: white;
 }
-
 marquee {
-    /* full width minus sidebar width */
-  margin-left: 220px;          /* push it right of sidebar */
-  background: #111;            /* dark strip */
+  margin-left: 220px;  
+  background: #111;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -81,7 +79,13 @@ marquee {
   white-space: nowrap;
   text-align: center;
 }
-
+@media (max-width: 768px) {
+  marquee {
+    margin-left: 0;      
+    font-size: 14px;
+    padding: 6px 0;
+  }
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
