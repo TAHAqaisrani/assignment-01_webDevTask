@@ -215,7 +215,7 @@ marquee {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding-bottom: 40px;
 }
 
 .contact-form {
@@ -226,7 +226,6 @@ marquee {
   border: 1px solid #ddd;
   width: 100%;
   max-width: 500px;
-  padding-bottom: 80px;
 }
 
 .contact-form h2 {
@@ -247,24 +246,27 @@ marquee {
   font-weight: bold;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 12px;
   border: 2px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.form-group input:focus{
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: #3498db;
 }
 
 /* restore basic textarea sizing */
-/* .form-group textarea {
+.form-group textarea {
   resize: vertical;
   min-height: 100px;
-} */
+}
 
 
 
