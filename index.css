@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,7 @@ body {
   color: #333;
 }
 
-/* Typography */
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-bottom: 10px;
@@ -26,6 +25,7 @@ a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 /* Navbar Container */
 nav {
    position: sticky;
@@ -40,14 +40,14 @@ nav {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Logo / Title */
+
 nav h3 {
   color: white;
   margin-right: 20px;
   font-size: 1.3rem;
 }
 
-/* Nav Links */
+
 nav ul {
   list-style: none;
   display: flex;
@@ -59,7 +59,6 @@ nav ul li a {
   color: white;
   padding: 8px 12px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
   display: block;
 }
 
@@ -90,13 +89,13 @@ marquee {
 /* Responsive Styles */
 @media (max-width: 768px) {
   nav {
-    margin-left: 0;          /* remove sidebar offset */
-    flex-direction: column;  /* stack brand + links */
+    margin-left: 0;         
+    flex-direction: column;  
     align-items: flex-start;
   }
 
   nav ul {
-    flex-direction: column;  /* stack links vertically */
+    flex-direction: column;  
     width: 100%;
     margin-top: 10px;
   }
@@ -107,7 +106,7 @@ marquee {
   }
 
   nav ul li a {
-    width: 100%; /* full width links on mobile */
+    width: 100%; 
   }
 }
 
@@ -150,7 +149,6 @@ marquee {
   display: block;
   padding: 10px 12px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 #sidebar a:hover {
@@ -158,10 +156,16 @@ marquee {
   color: white;
 }
 
+/* Hide nested links by default */
 #sidebar ul ul {
-  margin-top: 5px;
-  padding-left: 15px;
+  display: none;
 }
+
+/* Show nested links when hovering on parent li */
+#sidebar ul li:hover > ul {
+  display: block;
+}
+
 
 /* style only nested (child) links in the sub-list */
 #sidebar ul ul a {
@@ -170,9 +174,7 @@ marquee {
   background-color: rgba(255,255,255,0.05);
 }
 
-#sidebar ul ul a:hover {
-  background-color: #e74c3c;
-}
+
 
 /* Hide sidebar on small screens */
 @media (max-width: 768px) {
@@ -201,18 +203,37 @@ marquee {
   height: auto;
   border: 2px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  
+  transition: all 0.3s ease;
 }
 
+#img1 { transition: all 0.3s ease; }
+#img2 { transition: all 0.3s ease; }
+#img3 { transition: all 0.3s ease; }
+#img4 { transition: all 0.3s ease; }
+#img5 { transition: all 0.3s ease; }
+#img6 { transition: all 0.3s ease; }
+#img7 { transition: all 0.3s ease; }
+#img8 { transition: all 0.3s ease; }
+#img9 { transition: all 0.3s ease; }
+
+/* Individual, simple hover effects */
+#img1:hover { transform: scale(1.06); }
+#img2:hover { transform: rotate(2deg) scale(1.02); }
+#img3:hover { transform: translateY(-6px); }
+#img4:hover { filter: brightness(1.1); transform: scale(1.02); }
+#img5:hover { filter: grayscale(60%); }
+#img6:hover { transform: rotate(-2deg) scale(1.02); }
+#img7:hover { box-shadow: 0 6px 14px rgba(0,0,0,0.18); transform: translateY(-4px); }
+#img8:hover { filter: contrast(1.2); }
+#img9:hover { transform: scale(1.03); opacity: 0.95; }
+
+
+/* 
 .gallery img:hover {
   transform: scale(1.05);
   border-color: #3498db;
-}
-/* removed undefined bounce animation on #img1 to avoid console errors */
-#img1 {
-}
+} */
+
 /* Form Styling */
 .form-container {
   margin-left: 220px;
@@ -268,7 +289,7 @@ marquee {
   border-color: #3498db;
 }
 
-/* restore basic textarea sizing */
+
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
@@ -399,14 +420,14 @@ marquee {
 }
 
 .footer a {
-  color: #3498db;
+  color: #d7d7d7ff;
   text-decoration: none;
   margin: 0 10px;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #5dade2;
+  color: #cd1b1bff;
 }
 
 /* Responsive Design */
